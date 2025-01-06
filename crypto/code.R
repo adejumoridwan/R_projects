@@ -28,7 +28,7 @@ prophet_data <- data.frame(ds = daily_data$Date, y = daily_data$Close)
 model <- prophet(prophet_data)
 
 # Make future predictions for the next 30 days
-future <- make_future_dataframe(model, periods = 30)  # Daily frequency by default
+future <- make_future_dataframe(model, periods = 30)
 forecast <- predict(model, future)
 
 # Plot the forecast
